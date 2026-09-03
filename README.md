@@ -26,7 +26,7 @@
 ```
 ├── DESIGN.md / index.html    # 方案总纲 / 全景图
 ├── roles/                    # 四角色职责与输入输出
-├── cie/                      # G1-G4 门禁 + release + check_health（可执行）
+├── cie/                      # G1-G4 + release + check_health + verify_runtime 三元组校验
 ├── registry/                 # 镜像台账（三元组）+ 数据集登记
 ├── templates/                # ①工作区 / ③流程 / Dockerfile 模板
 ├── docs/                     # 门禁详规 + S1-S5 验收场景矩阵

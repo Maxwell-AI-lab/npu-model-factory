@@ -18,8 +18,12 @@ from vllm_ascend.spec_decode.dspark_proposer import AscendDSparkProposer
 print(\"smoke IMPORT-OK\")"' || { echo "[FAIL] 冒烟失败"; exit 1; }
 
 # --- 2. 镜像 sha256 ---
-IMG_SHA=$(docker inspect "$TAG" --format '{{.Id}}' | sed 's/sha256://;s/.\{16\}$/&/' | cut -c1-64)
-TARBALL_SHA="(docker save 后 sha256sum 补填)"
+IMG_SHA=$(docker inspect "$TAG" --format '{{.Id}}' | sed 's/sha256://' | cut -c1-12)
+# tar 若已导出则自动算 sha256；未导出保持 TODO（release 前必须补全）
+TARBALL_SHA="TODO"
+for t in /data/image/*${TAG#*:}*.tar.gz /data/image/*${TAG#*:}*.tar; do
+  [ -f "$t" ] && { TARBALL_SHA="$(sha256sum "$t" | cut -d' ' -f1)  # $t"; break; }
+done
 
 # --- 3. 三元组登记（权重/数据 sha256 由提供方填） ---
 DATE=$(date +%F)

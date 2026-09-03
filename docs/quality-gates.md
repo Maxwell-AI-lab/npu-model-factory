@@ -30,7 +30,8 @@
 | 时机 | G2 通过后 |
 | 验什么 | 冒烟（容器能起 + 关键 import）+ manifest 三元组登记完整性 |
 | 通过标准 | 冒烟 IMPORT-OK；manifest 条目含镜像 sha256、权重/数据 sha256、场景类型、基线占位 |
-| 工具 | `cie/g3_image_register.sh` |
+| 工具 | `cie/g3_image_register.sh`（tar 已导出时自动算 sha256） |
+| 锁定件 | `cie/verify_runtime.sh`——发布锁定与②起跑校验共用一套（不匹配拒绝起跑） |
 | 未过处置 | 补全登记项；sha256 由提供方（①或 CIE）实测填写，不留空发布 |
 
 ## G4 运行门禁（发布前最后一关）
@@ -48,7 +49,11 @@
 G4 的验收深度按 `docs/acceptance-matrix.md` 的 S1-S5 场景调整：
 S5 重构只到 G2（等价性证明）即可；S1/S3 需全 G1-G4 + 历史坑复查。
 
-## 发布（release.sh）
+## 起跑校验（verify_runtime.sh，②侧）
+
+manifest 三元组的消费端：②起跑前执行，权重/数据 sha256 实测对账，
+不匹配直接拒绝——避免"换批权重/数据被重新生成"导致基线对照失真。
+CIE 发布时用同一脚本生成目录指纹回填登记。
 
 前置 manifest 中该 tag `acceptance: "PASS"`。产出交付包：
 使用说明 README（取镜像/起跑/健康对照/异常回流四段）+ check_health + 三元组清单。

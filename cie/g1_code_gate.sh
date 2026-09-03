@@ -28,26 +28,16 @@ echo "[INFO] patch 涉及 $FILES 个文件"
 NEW_FILES=$(git apply --numstat "$PATCH" 2>/dev/null | awk '$1=="0" && $2=="0"{print}' | wc -l || true)
 echo "[INFO] 其中全新文件 $NEW_FILES 个（应同时提交到 overlay/new-files/）"
 
-# --- 3. import 自检：关键类可导入（容器内或源码树直接跑） ---
-if command -v python3 &>/dev/null; then
-  PYTHONPATH="$SRC/vllm-ascend:$SRC/verl" python3 - <<'PYEOF' \
-    && echo "[PASS] import 自检通过" \
-    || { echo "[FAIL] import 自检失败"; exit 1; }
-# 按模型替换关键类；此处为模板示例
-import importlib, sys
-checks = [
-    ("vllm_ascend.spec_decode.dspark_proposer", "AscendDSparkProposer"),
-]
-ok = True
-for mod, cls in checks:
-    try:
-        getattr(importlib.import_module(mod), cls)
-        print(f"  [ok] {mod}.{cls}")
-    except Exception as e:
-        print(f"  [FAIL] {mod}.{cls}: {e}")
-        ok = False
-sys.exit(0 if ok else 1)
-PYEOF
+# --- 3. import 自检：必须在容器内跑（宿主机无 vllm/torch_npu 环境）---
+#      传 SMOKE_IMAGE 环境变量指定镜像；未传则跳过（G3 冒烟会覆盖此项）
+if [ -n "${SMOKE_IMAGE:-}" ]; then
+  docker run --rm --entrypoint /bin/bash "$SMOKE_IMAGE" -c '
+    PYTHONPATH=/workspace-verl python3 -c "
+from vllm_ascend.spec_decode.dspark_proposer import AscendDSparkProposer
+print("[PASS] import 自检通过")"' \
+    || { echo "[FAIL] import 自检失败（容器内）"; exit 1; }
+else
+  echo "[SKIP] 未设 SMOKE_IMAGE——import 自检延后到 G3 冒烟执行"
 fi
 
 # --- 4. PR 附自验输出检查（提示性） ---
