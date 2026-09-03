@@ -5004,7 +5004,7 @@
     <!-- Main Diagram -->
     <div class="diagram-container" data-detail-level="read"
          data-preset-badge-editorial-plate="ARCHIFY / 图版 04">
-      <svg viewBox="0 0 1184 660" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-preset="classic" data-quality-profile="showcase">
+      <svg viewBox="0 0 1178 660" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-preset="classic" data-quality-profile="showcase">
         <title id="archify-diagram-title">NPU 模型工厂 · 用户角色与工作流全景</title>
         <desc id="archify-diagram-description">由 Archify 生成的工作流图。</desc>
         <!-- Definitions -->
@@ -5030,45 +5030,45 @@
         <rect width="100%" height="100%" fill="url(#grid)" />
 
         <!-- Swimlanes -->
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-0" x="40" y="52" width="1024" height="106" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-0" x="40" y="52" width="1110" height="106" rx="10" class="c-lane" stroke-width="1"/>
         <text x="54" y="74" class="t-dim" font-size="10" font-weight="600">01 / ① 模型适配工程师</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-1" x="40" y="178" width="1024" height="106" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-1" x="40" y="178" width="1110" height="106" rx="10" class="c-lane" stroke-width="1"/>
         <text x="54" y="200" class="t-dim" font-size="10" font-weight="600">02 / ③ 特性开发工程师</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-2" x="40" y="304" width="1024" height="106" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-2" x="40" y="304" width="1110" height="106" rx="10" class="c-lane" stroke-width="1"/>
         <text x="54" y="326" class="t-dim" font-size="10" font-weight="600">03 / CIE 工程师（版本集成 · 质量验证）</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-3" x="40" y="430" width="1024" height="106" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-3" x="40" y="430" width="1110" height="106" rx="10" class="c-lane" stroke-width="1"/>
         <text x="54" y="452" class="t-dim" font-size="10" font-weight="600">04 / ② 训练用户</text>
 
         <!-- Phase headers -->
         <line x1="69" y1="35" x2="375.4" y2="35" class="a-default" stroke-width="1.1"/>
         <rect x="69" y="27" width="306.4" height="16" rx="4" class="c-mask"/>
         <text x="222.2" y="39" class="t-muted" font-size="8" font-weight="600" text-anchor="middle">洞察</text>
-        <line x1="445.4" y1="35" x2="871.4" y2="35" class="a-emphasis" stroke-width="1.1"/>
-        <rect x="445.4" y="27" width="426" height="16" rx="4" class="c-mask"/>
-        <text x="658.4" y="39" class="t-backend" font-size="8" font-weight="600" text-anchor="middle">分层验证（不跳层）</text>
-        <line x1="941.4000000000001" y1="35" x2="1033.4" y2="35" class="a-dashed" stroke-width="1.1"/>
-        <rect x="941.4000000000001" y="27" width="92.00000000000011" height="16" rx="4" class="c-mask"/>
-        <text x="987.4000000000001" y="39" class="t-messagebus" font-size="8" font-weight="600" text-anchor="middle">资产与使用</text>
+        <line x1="445.4" y1="35" x2="861.4" y2="35" class="a-emphasis" stroke-width="1.1"/>
+        <rect x="445.4" y="27" width="416" height="16" rx="4" class="c-mask"/>
+        <text x="653.4" y="39" class="t-backend" font-size="8" font-weight="600" text-anchor="middle">分层验证（不跳层）</text>
+        <line x1="1028" y1="35" x2="1120" y2="35" class="a-dashed" stroke-width="1.1"/>
+        <rect x="1028" y="27" width="92" height="16" rx="4" class="c-mask"/>
+        <text x="1074" y="39" class="t-messagebus" font-size="8" font-weight="600" text-anchor="middle">资产与使用</text>
 
         <!-- Workflow groups -->
 
 
         <!-- Edge paths -->
-        <path data-edge-from="verify-rl" data-edge-to="repo" data-edge-label="补丁归档" data-edge-key="0" data-edge-id="e-archive" data-composition-points="720.4,120;825.4,120;825.4,338" d="M 720.4 120 L 825.4 120 L 825.4 338" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="repo" data-edge-to="build-image" data-edge-key="1" data-edge-id="e-build" data-composition-points="892.4,372;920.4,372" d="M 892.4 372 L 920.4 372" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="2" data-edge-id="e-feedback-in" data-composition-points="825.4,464;825.4,406" d="M 825.4 464 L 825.4 406" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+        <path data-edge-from="verify-rl" data-edge-to="repo" data-edge-label="补丁归档" data-edge-key="0" data-edge-id="e-archive" data-composition-points="720.4,120;736.4,120;736.4,426;653.4,426;653.4,406" d="M 720.4 120 L 736.4 120 L 736.4 426 L 653.4 426 L 653.4 406" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="repo" data-edge-to="build-image" data-edge-key="1" data-edge-id="e-build" data-composition-points="653.4,338;653.4,322;815.4,322;815.4,338" d="M 653.4 338 L 653.4 322 L 815.4 322 L 815.4 338" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="2" data-edge-id="e-feedback-in" data-composition-points="1074,532;1074,552;653.4,552;653.4,406" d="M 1074 532 L 1074 552 L 653.4 552 L 653.4 406" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
         <path data-edge-from="feature-input" data-edge-to="dev-feature" data-edge-label="fetch_sources" data-edge-key="3" data-edge-id="e-fstart" data-composition-points="182,246;262.4,246" d="M 182 246 L 262.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="new-model" data-edge-to="verify-infer" data-edge-key="4" data-edge-id="e-infer" data-composition-points="182,120;262.4,120" d="M 182 120 L 262.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="5" data-edge-id="e-pr" data-composition-points="653.4,272;653.4,372;758.4,372" d="M 653.4 272 L 653.4 372 L 758.4 372" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="5" data-edge-id="e-pr" data-composition-points="653.4,272;653.4,294;736.4,294;736.4,372;720.4,372" d="M 653.4 272 L 653.4 294 L 736.4 294 L 736.4 372 L 720.4 372" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
         <path data-edge-from="dev-feature" data-edge-to="regen-patch" data-edge-label="冒烟通过" data-edge-key="6" data-edge-id="e-regen" data-composition-points="396.4,246;586.4,246" d="M 396.4 246 L 586.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="build-image" data-edge-to="release" data-edge-label="验收通过 · 晋级 Stable" data-edge-key="7" data-edge-id="e-release" data-composition-points="1054.4,372;1166,372;1166,498;1055.4,498" d="M 1054.4 372 L 1166 372 L 1166 498 L 1055.4 498" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="build-image" data-edge-to="release" data-edge-label="验收通过 · 晋级 Stable" data-edge-key="7" data-edge-id="e-release" data-composition-points="815.4,406;815.4,426;1074,426;1074,398" d="M 815.4 406 L 815.4 426 L 1074 426 L 1074 398" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
         <path data-edge-from="verify-train" data-edge-to="verify-rl" data-edge-key="8" data-edge-id="e-rl" data-composition-points="558.4,120;586.4,120" d="M 558.4 120 L 586.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="verify-infer" data-edge-to="verify-train" data-edge-key="9" data-edge-id="e-train" data-composition-points="396.4,120;424.4,120" d="M 396.4 120 L 424.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="10" data-edge-id="e-tstart" data-composition-points="653.4,524;653.4,552;825.4,552;825.4,532" d="M 653.4 524 L 653.4 552 L 825.4 552 L 825.4 532" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="release" data-edge-to="train-input" data-edge-label="docker pull" data-edge-key="11" data-edge-id="e-use" data-composition-points="1055.4,498;1071.4,498;1071.4,552;653.4,552;653.4,524" d="M 1055.4 498 L 1071.4 498 L 1071.4 552 L 653.4 552 L 653.4 524" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="10" data-edge-id="e-tstart" data-composition-points="882.4,505;1007,505" d="M 882.4 505 L 1007 505" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="release" data-edge-to="train-input" data-edge-label="docker pull" data-edge-key="11" data-edge-id="e-use" data-composition-points="1142,372;1162,372;1162,456;815.4,456;815.4,472" d="M 1142 372 L 1162 372 L 1162 456 L 815.4 456 L 815.4 472" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
 
         <!-- Nodes -->
         <g id="node-new-model" data-node-id="new-model" data-node-label="新模型 · 9宫格分析" tabindex="0" role="button" aria-label="聚焦新模型 · 9宫格分析，config+权重+架构 · skill 0, ① 模型适配工程师 › 洞察" aria-pressed="false" data-node-kind="external" data-node-sublabel="config+权重+架构 · skill 0" data-node-tag="① 输入" data-node-context="① 模型适配工程师 › 洞察">
@@ -5160,76 +5160,75 @@
 
         <g id="node-repo" data-node-id="repo" data-node-label="Git 分支" tabindex="0" role="button" aria-label="聚焦Git 分支，代码合并管理 · G1 门禁, CIE 工程师（版本集成 · 质量验证） › 分层验证（不跳层）" aria-pressed="false" data-node-kind="database" data-node-sublabel="代码合并管理 · G1 门禁" data-node-tag="可溯源" data-node-context="CIE 工程师（版本集成 · 质量验证） › 分层验证（不跳层）">
           <title>Git 分支 · 代码合并管理 · G1 门禁 · CIE 工程师（版本集成 · 质量验证） › 分层验证（不跳层） · 可溯源</title>
-          <rect x="758.4" y="338" width="134" height="68" rx="6" class="c-mask"/>
-          <rect x="758.4" y="338" width="134" height="68" rx="6" class="c-database" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(764.4 344) scale(0.6875)">
+          <rect x="586.4" y="338" width="134" height="68" rx="6" class="c-mask"/>
+          <rect x="586.4" y="338" width="134" height="68" rx="6" class="c-database" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(592.4 344) scale(0.6875)">
             <ellipse cx="8" cy="4" rx="5" ry="2"/>
             <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="825.4" y="359" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Git 分支</text>
-          <text data-detail="context" x="825.4" y="376" class="t-muted" font-size="8" text-anchor="middle">代码合并管理 · G1 门禁</text>
-        <text data-detail="fine" x="825.4" y="394" class="t-database" font-size="7" text-anchor="middle">可溯源</text>
+          <text data-node-label="" data-detail-anchor="" x="653.4" y="359" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Git 分支</text>
+          <text data-detail="context" x="653.4" y="376" class="t-muted" font-size="8" text-anchor="middle">代码合并管理 · G1 门禁</text>
+        <text data-detail="fine" x="653.4" y="394" class="t-database" font-size="7" text-anchor="middle">可溯源</text>
         </g>
 
-        <g id="node-build-image" data-node-id="build-image" data-node-label="质量门禁+镜像制作" tabindex="0" role="button" aria-label="聚焦质量门禁+镜像制作，G2-G4 · Dockerfile 构建, CIE 工程师（版本集成 · 质量验证） › 资产与使用" aria-pressed="false" data-node-kind="security" data-node-sublabel="G2-G4 · Dockerfile 构建" data-node-tag="skill 4" data-node-context="CIE 工程师（版本集成 · 质量验证） › 资产与使用">
-          <title>质量门禁+镜像制作 · G2-G4 · Dockerfile 构建 · CIE 工程师（版本集成 · 质量验证） › 资产与使用 · skill 4</title>
-          <rect x="920.4" y="338" width="134" height="68" rx="6" class="c-mask"/>
-          <rect x="920.4" y="338" width="134" height="68" rx="6" class="c-security" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(926.4 344) scale(0.6875)">
+        <g id="node-build-image" data-node-id="build-image" data-node-label="质量门禁+镜像制作" tabindex="0" role="button" aria-label="聚焦质量门禁+镜像制作，G2-G4 · Dockerfile 构建, CIE 工程师（版本集成 · 质量验证） › 分层验证（不跳层）" aria-pressed="false" data-node-kind="security" data-node-sublabel="G2-G4 · Dockerfile 构建" data-node-tag="skill 4" data-node-context="CIE 工程师（版本集成 · 质量验证） › 分层验证（不跳层）">
+          <title>质量门禁+镜像制作 · G2-G4 · Dockerfile 构建 · CIE 工程师（版本集成 · 质量验证） › 分层验证（不跳层） · skill 4</title>
+          <rect x="748.4" y="338" width="134" height="68" rx="6" class="c-mask"/>
+          <rect x="748.4" y="338" width="134" height="68" rx="6" class="c-security" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(754.4 344) scale(0.6875)">
             <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
             <path d="m5.8 8 1.5 1.5 3-3"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="987.4" y="359" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">质量门禁+镜像制作</text>
-          <text data-detail="context" x="987.4" y="376" class="t-muted" font-size="8" text-anchor="middle">G2-G4 · Dockerfile 构建</text>
-        <text data-detail="fine" x="987.4" y="394" class="t-security" font-size="7" text-anchor="middle">skill 4</text>
+          <text data-node-label="" data-detail-anchor="" x="815.4" y="359" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">质量门禁+镜像制作</text>
+          <text data-detail="context" x="815.4" y="376" class="t-muted" font-size="8" text-anchor="middle">G2-G4 · Dockerfile 构建</text>
+        <text data-detail="fine" x="815.4" y="394" class="t-security" font-size="7" text-anchor="middle">skill 4</text>
+        </g>
+
+        <g id="node-release" data-node-id="release" data-node-label="正式版本发布" tabindex="0" role="button" aria-label="聚焦正式版本发布，定期班车 · 三元组+文档, CIE 工程师（版本集成 · 质量验证） › 资产与使用" aria-pressed="false" data-node-kind="security" data-node-sublabel="定期班车 · 三元组+文档" data-node-context="CIE 工程师（版本集成 · 质量验证） › 资产与使用">
+          <title>正式版本发布 · 定期班车 · 三元组+文档 · CIE 工程师（版本集成 · 质量验证） › 资产与使用</title>
+          <rect x="1006" y="346" width="136" height="52" rx="6" class="c-mask"/>
+          <rect x="1006" y="346" width="136" height="52" rx="6" class="c-security" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(1012 352) scale(0.6875)">
+            <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
+            <path d="m5.8 8 1.5 1.5 3-3"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="1074" y="367" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">正式版本发布</text>
+          <text data-detail="context" x="1074" y="384" class="t-muted" font-size="8" text-anchor="middle">定期班车 · 三元组+文档</text>
         </g>
 
         <g id="node-train-input" data-node-id="train-input" data-node-label="发布版 + 权重 + 数据" tabindex="0" role="button" aria-label="聚焦发布版 + 权重 + 数据，② 的输入：按登记取用, ② 训练用户 › 分层验证（不跳层）" aria-pressed="false" data-node-kind="external" data-node-sublabel="② 的输入：按登记取用" data-node-context="② 训练用户 › 分层验证（不跳层）">
           <title>发布版 + 权重 + 数据 · ② 的输入：按登记取用 · ② 训练用户 › 分层验证（不跳层）</title>
-          <rect x="586.4" y="472" width="134" height="52" rx="6" class="c-mask"/>
-          <rect x="586.4" y="472" width="134" height="52" rx="6" class="c-external" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(592.4 478) scale(0.6875)">
+          <rect x="748.4" y="472" width="134" height="52" rx="6" class="c-mask"/>
+          <rect x="748.4" y="472" width="134" height="52" rx="6" class="c-external" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(754.4 478) scale(0.6875)">
             <rect x="2.5" y="5" width="8.5" height="8" rx="1.5"/>
             <path d="M8 2.5h5.5V8M13.5 2.5 7.5 8.5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="653.4" y="493" class="t-primary" font-size="10.5" font-weight="600" text-anchor="middle">发布版 + 权重 + 数据</text>
-          <text data-detail="context" x="653.4" y="510" class="t-muted" font-size="8" text-anchor="middle">② 的输入：按登记取用</text>
+          <text data-node-label="" data-detail-anchor="" x="815.4" y="493" class="t-primary" font-size="10.5" font-weight="600" text-anchor="middle">发布版 + 权重 + 数据</text>
+          <text data-detail="context" x="815.4" y="510" class="t-muted" font-size="8" text-anchor="middle">② 的输入：按登记取用</text>
         </g>
 
-        <g id="node-run-train" data-node-id="run-train" data-node-label="跑训练+健康检查" tabindex="0" role="button" aria-label="聚焦跑训练+健康检查，② 输出：训练产物, ② 训练用户 › 分层验证（不跳层）" aria-pressed="false" data-node-kind="backend" data-node-sublabel="② 输出：训练产物" data-node-tag="skill 5" data-node-context="② 训练用户 › 分层验证（不跳层）">
-          <title>跑训练+健康检查 · ② 输出：训练产物 · ② 训练用户 › 分层验证（不跳层） · skill 5</title>
-          <rect x="758.4" y="464" width="134" height="68" rx="6" class="c-mask"/>
-          <rect x="758.4" y="464" width="134" height="68" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(764.4 470) scale(0.6875)">
+        <g id="node-run-train" data-node-id="run-train" data-node-label="跑训练+健康检查" tabindex="0" role="button" aria-label="聚焦跑训练+健康检查，② 输出：训练产物, ② 训练用户 › 资产与使用" aria-pressed="false" data-node-kind="backend" data-node-sublabel="② 输出：训练产物" data-node-tag="skill 5" data-node-context="② 训练用户 › 资产与使用">
+          <title>跑训练+健康检查 · ② 输出：训练产物 · ② 训练用户 › 资产与使用 · skill 5</title>
+          <rect x="1007" y="464" width="134" height="68" rx="6" class="c-mask"/>
+          <rect x="1007" y="464" width="134" height="68" rx="6" class="c-backend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(1013 470) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="825.4" y="485" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">跑训练+健康检查</text>
-          <text data-detail="context" x="825.4" y="502" class="t-muted" font-size="8" text-anchor="middle">② 输出：训练产物</text>
-        <text data-detail="fine" x="825.4" y="520" class="t-backend" font-size="7" text-anchor="middle">skill 5</text>
-        </g>
-
-        <g id="node-release" data-node-id="release" data-node-label="正式版本发布" tabindex="0" role="button" aria-label="聚焦正式版本发布，定期班车 · 三元组+文档, ② 训练用户 › 资产与使用" aria-pressed="false" data-node-kind="security" data-node-sublabel="定期班车 · 三元组+文档" data-node-tag="CIE 发布" data-node-context="② 训练用户 › 资产与使用">
-          <title>正式版本发布 · 定期班车 · 三元组+文档 · ② 训练用户 › 资产与使用 · CIE 发布</title>
-          <rect x="919.4" y="464" width="136" height="68" rx="6" class="c-mask"/>
-          <rect x="919.4" y="464" width="136" height="68" rx="6" class="c-security" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(925.4 470) scale(0.6875)">
-            <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
-            <path d="m5.8 8 1.5 1.5 3-3"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="987.4" y="485" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">正式版本发布</text>
-          <text data-detail="context" x="987.4" y="502" class="t-muted" font-size="8" text-anchor="middle">定期班车 · 三元组+文档</text>
-        <text data-detail="fine" x="987.4" y="520" class="t-security" font-size="7" text-anchor="middle">CIE 发布</text>
+          <text data-node-label="" data-detail-anchor="" x="1074" y="485" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">跑训练+健康检查</text>
+          <text data-detail="context" x="1074" y="502" class="t-muted" font-size="8" text-anchor="middle">② 输出：训练产物</text>
+        <text data-detail="fine" x="1074" y="520" class="t-backend" font-size="7" text-anchor="middle">skill 5</text>
         </g>
 
         <!-- Edge labels -->
         <g data-detail="context" data-edge-from="verify-rl" data-edge-to="repo" data-edge-label="补丁归档" data-edge-key="0" data-edge-id="e-archive">
-          <rect x="748.6999999999999" y="100" width="48.4" height="14" rx="3" class="c-mask"/>
-          <text x="772.9" y="110" class="t-muted" font-size="8" text-anchor="middle">补丁归档</text>
+          <rect x="670.6999999999999" y="406" width="48.4" height="14" rx="3" class="c-mask"/>
+          <text x="694.9" y="416" class="t-muted" font-size="8" text-anchor="middle">补丁归档</text>
         </g>
 
         <g data-detail="context" data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="2" data-edge-id="e-feedback-in">
-          <rect x="801.1999999999999" y="444" width="48.4" height="14" rx="3" class="c-mask"/>
-          <text x="825.4" y="454" class="t-database" font-size="8" text-anchor="middle">故障回流</text>
+          <rect x="839.5" y="532" width="48.4" height="14" rx="3" class="c-mask"/>
+          <text x="863.7" y="542" class="t-database" font-size="8" text-anchor="middle">故障回流</text>
         </g>
         <g data-detail="context" data-edge-from="feature-input" data-edge-to="dev-feature" data-edge-label="fetch_sources" data-edge-key="3" data-edge-id="e-fstart">
           <rect x="186" y="226" width="72.4" height="14" rx="3" class="c-mask"/>
@@ -5237,26 +5236,26 @@
         </g>
 
         <g data-detail="context" data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="5" data-edge-id="e-pr">
-          <rect x="684.1" y="352" width="43.6" height="14" rx="3" class="c-mask"/>
-          <text x="705.9" y="362" class="t-backend" font-size="8" text-anchor="middle">PR 合入</text>
+          <rect x="673.1" y="274" width="43.6" height="14" rx="3" class="c-mask"/>
+          <text x="694.9" y="284" class="t-backend" font-size="8" text-anchor="middle">PR 合入</text>
         </g>
         <g data-detail="context" data-edge-from="dev-feature" data-edge-to="regen-patch" data-edge-label="冒烟通过" data-edge-key="6" data-edge-id="e-regen">
           <rect x="467.2" y="226" width="48.4" height="14" rx="3" class="c-mask"/>
           <text x="491.4" y="236" class="t-muted" font-size="8" text-anchor="middle">冒烟通过</text>
         </g>
         <g data-detail="context" data-edge-from="build-image" data-edge-to="release" data-edge-label="验收通过 · 晋级 Stable" data-edge-key="7" data-edge-id="e-release">
-          <rect x="1052.4" y="352" width="115.6" height="14" rx="3" class="c-mask"/>
-          <text x="1110.2" y="362" class="t-backend" font-size="8" text-anchor="middle">验收通过 · 晋级 Stable</text>
+          <rect x="886.9000000000001" y="406" width="115.6" height="14" rx="3" class="c-mask"/>
+          <text x="944.7" y="416" class="t-backend" font-size="8" text-anchor="middle">验收通过 · 晋级 Stable</text>
         </g>
 
 
         <g data-detail="context" data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="10" data-edge-id="e-tstart">
-          <rect x="724.4" y="532" width="30" height="14" rx="3" class="c-mask"/>
-          <text x="739.4" y="542" class="t-muted" font-size="8" text-anchor="middle">挂载</text>
+          <rect x="929.7" y="485" width="30" height="14" rx="3" class="c-mask"/>
+          <text x="944.7" y="495" class="t-muted" font-size="8" text-anchor="middle">挂载</text>
         </g>
         <g data-detail="context" data-edge-from="release" data-edge-to="train-input" data-edge-label="docker pull" data-edge-key="11" data-edge-id="e-use">
-          <rect x="831.0000000000001" y="532" width="62.8" height="14" rx="3" class="c-mask"/>
-          <text x="862.4000000000001" y="542" class="t-muted" font-size="8" text-anchor="middle">docker pull</text>
+          <rect x="957.3000000000001" y="436" width="62.8" height="14" rx="3" class="c-mask"/>
+          <text x="988.7" y="446" class="t-muted" font-size="8" text-anchor="middle">docker pull</text>
         </g>
 
         <!-- Legend -->
