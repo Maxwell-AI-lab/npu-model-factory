@@ -1,0 +1,19 @@
+# 数据集登记（registry 的一部分）
+# 原则: 每个验证/训练数据集一条——来源可重建、校验和可对账
+
+datasets:
+  - id: "gsm8k-rl-train"
+    purpose: "RL 后训练验证（G4 基线对照的标准数据集）"
+    path: "/data/dataset/gsm8k/math_train_dataset/rl/train.parquet"
+    source: "verl 官方 GSM8K RL parquet"
+    gen_or_fetch: "按 verl 文档 prepare 数据（如版本升级需重新生成，生成后回填 sha256）"
+    sha256: "TODO"
+    used_by: ["deepseek-v4-dspark:v30-fixed"]
+
+  - id: "template-new-dataset"
+    purpose: "（模板）新数据集登记示例"
+    path: ""
+    source: ""
+    gen_or_fetch: ""
+    sha256: ""
+    used_by: []

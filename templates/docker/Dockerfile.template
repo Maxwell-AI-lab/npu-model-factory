@@ -1,0 +1,32 @@
+# Dockerfile 模板 —— 可复现镜像构建（CIE 镜像制作环节）
+# 实战经验来自 DSpark v30-fixed 完整重建（双镜像对比逐项通过）：
+# https://github.com/versatile-ai/automodelwire/tree/model-factory-deepseek/docker
+#
+# 前置: 分支根目录执行；build 机可访问 pypi 源 / 组件 git 源
+#   docker build -f docker/Dockerfile -t <model>:vN .
+
+# ==== 按模型替换区 ============================================
+# 基础镜像: 含 CANN + torch_npu + Python 的算力底座（镜像团队维护）
+FROM <cann-base-image:tag>
+# 组件源码获取脚本: clone 7 组件 → checkout 基线 → apply patch → symlink
+# COPY . /build && RUN bash /build/scripts/fetch_sources.sh /workspace-verl
+# Python 依赖: freeze 闭集 + --no-deps（resolver 会拒装历史快照）
+# RUN python3 -m pip install --no-deps -r /tmp/requirements-pip.txt
+# ENV 对齐: LD_LIBRARY_PATH 等 commit 固化值（勿凭空写）
+# =============================================================
+
+# ---- 通用骨架（示意，完整实例见上方实战链接） ----
+# 1. 组件源码树 + 补丁（patch 基线不符 git apply 即失败 = 防错版）
+# COPY . /build
+# RUN bash /build/scripts/fetch_sources.sh /workspace-verl && rm -rf /build
+#
+# 2. 算子编译产物（若基础镜像自带 csrc 构建缓存，同源复制勿重编）
+# RUN cp -a <base-path>/csrc/build /workspace-verl/vllm-ascend/csrc/
+#
+# 3. site-packages 核心覆盖（merge 语义，仅覆盖同名文件）
+# COPY overlay/vllm-sitepackages/vllm/ <site-packages>/vllm/
+#
+# 4. 运行时 ENV（对齐验证过的容器 ENV 完整值）
+# ENV PATH=... LD_LIBRARY_PATH=... PYTHONPATH=...
+
+# 构建后必须过 G2（双镜像对比）才进入 G3 登记

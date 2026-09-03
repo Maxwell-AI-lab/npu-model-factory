@@ -1,0 +1,43 @@
+# <ModelName> factory-config 模板（① 模型适配工程师的工作区起点）
+# 用法: 复制到 models/<ModelName>/factory-config.yaml，逐项填写
+
+model:
+  name: "<ModelName>"
+  slug: "<model-slug>"
+  path: "/data/model/<model-dir>"          # 权重路径（登记三元组用）
+  arch: "<hf model_type>"
+  size_gb: 0
+  dtype: "bf16"
+
+serve:                                      # 推理验证（skill 1）参数
+  tensor_parallel: 8
+  data_parallel: 1
+  expert_parallel: 1
+  enforce_eager: true
+  gpu_memory_utilization: 0.72
+  max_model_len: 4096
+
+train:                                      # 训练验证（skill 2-3）参数
+  tensor_parallel: 4
+  pipeline_parallel: 2
+  expert_parallel: 32
+  nnodes: 8
+  batch_size: 32
+  param_offload: true
+  grad_offload: true
+
+operators: []                               # 模型特有算子路径（如 sparse_flash_mla）
+
+version_combo:                              # 组件基线（fetch_sources / Dockerfile 依据）
+  cann: "9.1.0-beta.3"
+  vllm: "<如 0.25.1>"
+  vllm_ascend: "<commit>"
+  verl: "<commit>"
+  torch_npu: "<如 2.10.0.post2>"
+
+verify:                                     # G4/S1 验收阈值
+  min_pearson: 0.995
+  min_steps: 5
+  expected_pearson: "<首版实测后回填，如 0.996>"
+  expected_step_time: "<如 1090-1400s>"
+  error_keywords: ["EngineDead", "NPU out of memory", "aicpu exception"]

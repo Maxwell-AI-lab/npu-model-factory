@@ -1,0 +1,41 @@
+# 镜像台账（全局唯一，训练工程师的唯一入口）
+# 每个镜像 tag 一条；G3 登记、G4 回填、release 晋级后即为可分发
+# 首条为示例条目（DSpark v30-fixed 实战数据）
+
+schema: v1
+convention:
+  versioning: "基础版 vN（①产出）；正式版 vN.x-<特性集>（班车）；紧急修复 vN.x.y（插班）"
+  rule: "tag 递增永不覆盖；已验证基线永久保留可回退"
+
+images:
+  - tag: "deepseek-v4-dspark:v30-fixed"        # 示例：实战首条
+    scene: "S1+S2"                              # 新模型 + DSpark 特性复合
+    date: "2026-08-20"
+    model: "DeepSeek-V4-Flash"
+    image:
+      id: "sha256:ef517fe815af…"
+      tarball: "/data/image/deepseek-v4-dspark-v30-fixed.tar.gz"
+      tarball_sha256: "432ff1d5e59534afcd7df3fcd7bf3d6d2718428c6a9f9605d3f093fb84e3efe6"
+    components:                                  # 组件基线（fetch_sources/Dockerfile 一致）
+      verl: "809f2d8f"
+      vllm-ascend: "c2670ba3f (releases/v0.25.1rc)"
+      MindSpeed-LLM: "99f7fc1d"
+      Megatron-LM: "a845aa7e1 (core_r0.12.0)"
+      MindSpeed: "a1becca8"
+      mbridge: "0cd4ae2 (0.15.1)"
+      ops-transformer: "9715a522"
+    runtime_deps:                                # ★三元组（起跑前校验，不匹配拒绝）
+      weights:
+        path: "/data_nv1/models/DeepSeek-V4-Flash-DSpark-BF16"
+        sha256: "TODO-首次启用三元组时回填"
+      dataset:
+        path: "/data/dataset/gsm8k/math_train_dataset/rl/train.parquet"
+        sha256: "TODO"
+    baseline:                                    # 该三元组下的健康基线（65 步实测）
+      pearson: "0.9958~0.9970（均值 0.9964，零漂移）"
+      tpot_ms: "8.2~11.0"
+      score: "均值 0.91（0.855~0.977）"
+      step_time: "稳态 ~23min"
+      notes: "生成零乱码；step20 checkpoint 当时未实测（已知未验点）"
+    acceptance: "PASS"
+    acceptance_evidence: "DSpark 集成验证报告（Run C 19 步 + Run D 12 步）"
