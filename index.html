@@ -5471,24 +5471,24 @@
       <div class="card">
         <div class="card-header">
           <div class="card-dot cyan"></div>
-          <h3>三类核心用户 · 输入输出</h3>
+          <h3>角色职责与输入输出</h3>
         </div>
         <ul>
-          <li>&bull; ① 适配：新模型 → 补丁 + 镜像（skill 0-4 不跳层）</li>
-          <li>&bull; ③ 基于①基础版开发 → 合入 → 定期正式版给②</li>
-          <li>&bull; ② 训练用户：发布包（镜像+README+skill）+ 权重数据 → 训练产物</li>
+          <li>&bull; ① 模型适配：打通新模型训推 RL｜入 新模型 → 出 补丁+基础镜像</li>
+          <li>&bull; ③ 特性开发：新特性集成验证｜入 ①基础版+分支 → 出 特性镜像</li>
+          <li>&bull; CIE：合并管理·质量门禁·镜像制作·定期发布｜入 补丁 → 出 正式版</li>
+          <li>&bull; ② 训练：直接跑训练｜入 发布版+权重+数据 → 出 训练产物+回流</li>
         </ul>
       </div>
 
       <div class="card">
         <div class="card-header">
           <div class="card-dot rose"></div>
-          <h3>质量门禁 G1-G4 与分场景验收</h3>
+          <h3>质量门禁与分场景验收</h3>
         </div>
         <ul>
           <li>&bull; CIE 把关 G1-G4：patch 校验 → 双镜像对比 → 冒烟 → ≥5 步回归 → Stable 发布</li>
-          <li>&bull; 新模型：功能跑通 + 立精度基线（pearson/score/无乱码）</li>
-          <li>&bull; 新特性：生效实证 + 精度不回退 + 可回退；升级/修复：全量回归 + 对比</li>
+          <li>&bull; 分场景验收：新模型立基线 / 新特性实证不回退 / 升级修复全量回归</li>
         </ul>
       </div>
     </div>
