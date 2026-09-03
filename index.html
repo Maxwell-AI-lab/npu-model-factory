@@ -5063,7 +5063,7 @@
         <path data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="3" data-edge-id="e-feedback-in" data-composition-points="1086.6,532;1086.6,552;956.8,552;956.8,372;940.8,372" d="M 1086.6 532 L 1086.6 552 L 956.8 552 L 956.8 372 L 940.8 372" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
         <path data-edge-from="feature-input" data-edge-to="dev-feature" data-edge-label="fetch_sources" data-edge-key="4" data-edge-id="e-fstart" data-composition-points="188,246;268.4,246" d="M 188 246 L 268.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="analyze" data-edge-to="verify-infer" data-edge-key="5" data-edge-id="e-infer" data-composition-points="408.4,120;436.4,120" d="M 408.4 120 L 436.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="registry" data-edge-to="train-input" data-edge-label="按登记版本" data-edge-key="6" data-edge-id="e-pinned" data-composition-points="604.4,379;20,379;20,498;604.4,498" d="M 604.4 379 L 20 379 L 20 498 L 604.4 498" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+        <path data-edge-from="registry" data-edge-to="train-input" data-edge-label="按登记版本" data-edge-key="6" data-edge-id="e-pinned" data-composition-points="604.4,372;20,372;20,498;604.4,498" d="M 604.4 372 L 20 372 L 20 498 L 604.4 498" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
         <path data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="7" data-edge-id="e-pr" data-composition-points="744.4,246;863.8,246;863.8,338" d="M 744.4 246 L 863.8 246 L 863.8 338" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
         <path data-edge-from="dev-feature" data-edge-to="regen-patch" data-edge-label="冒烟通过" data-edge-key="8" data-edge-id="e-regen" data-composition-points="408.4,246;604.4,246" d="M 408.4 246 L 604.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="repo" data-edge-to="registry" data-edge-label="发布登记" data-edge-key="9" data-edge-id="e-register" data-composition-points="870.8,406;870.8,422;674.4,422;674.4,406" d="M 870.8 406 L 870.8 422 L 674.4 422 L 674.4 406" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
@@ -5072,7 +5072,6 @@
         <path data-edge-from="verify-infer" data-edge-to="verify-train" data-edge-key="12" data-edge-id="e-train" data-composition-points="576.4,120;604.4,120" d="M 576.4 120 L 604.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="13" data-edge-id="e-tstart" data-composition-points="674.4,532;674.4,552;1086.6,552;1086.6,532" d="M 674.4 532 L 674.4 552 L 1086.6 552 L 1086.6 532" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="release" data-edge-to="run-train" data-edge-label="docker pull" data-edge-key="14" data-edge-id="e-use" data-composition-points="870.8,464;870.8,448;941.1999999999999,448;941.1999999999999,498;1011.5999999999999,498" d="M 870.8 464 L 870.8 448 L 941.1999999999999 448 L 941.1999999999999 498 L 1011.5999999999999 498" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="registry" data-edge-to="verify-infer" data-edge-label="数据集+权重供给" data-edge-key="15" data-edge-id="e-verify-res" data-composition-points="674.4,406;674.4,422;20,422;20,162;506.4,162;506.4,146" d="M 674.4 406 L 674.4 422 L 20 422 L 20 162 L 506.4 162 L 506.4 146" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
 
         <!-- Nodes -->
         <g id="node-new-model" data-node-id="new-model" data-node-label="新模型发布" tabindex="0" role="button" aria-label="聚焦新模型发布，HF config / 权重 / 架构代码, ① 模型适配工程师 › 洞察" aria-pressed="false" data-node-kind="external" data-node-sublabel="HF config / 权重 / 架构代码" data-node-tag="① 输入" data-node-context="① 模型适配工程师 › 洞察">
@@ -5270,8 +5269,8 @@
         </g>
 
         <g data-detail="context" data-edge-from="registry" data-edge-to="train-input" data-edge-label="按登记版本" data-edge-key="6" data-edge-id="e-pinned">
-          <rect x="283.2" y="359" width="58" height="14" rx="3" class="c-mask"/>
-          <text x="312.2" y="369" class="t-database" font-size="8" text-anchor="middle">按登记版本</text>
+          <rect x="283.2" y="352" width="58" height="14" rx="3" class="c-mask"/>
+          <text x="312.2" y="362" class="t-database" font-size="8" text-anchor="middle">按登记版本</text>
         </g>
         <g data-detail="context" data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="7" data-edge-id="e-pr">
           <rect x="782.3" y="226" width="43.6" height="14" rx="3" class="c-mask"/>
@@ -5298,10 +5297,6 @@
         <g data-detail="context" data-edge-from="release" data-edge-to="run-train" data-edge-label="docker pull" data-edge-key="14" data-edge-id="e-use">
           <rect x="874.6" y="428" width="62.8" height="14" rx="3" class="c-mask"/>
           <text x="906" y="438" class="t-muted" font-size="8" text-anchor="middle">docker pull</text>
-        </g>
-        <g data-detail="context" data-edge-from="registry" data-edge-to="verify-infer" data-edge-label="数据集+权重供给" data-edge-key="15" data-edge-id="e-verify-res">
-          <rect x="306.2" y="402" width="82" height="14" rx="3" class="c-mask"/>
-          <text x="347.2" y="412" class="t-database" font-size="8" text-anchor="middle">数据集+权重供给</text>
         </g>
 
         <!-- Legend -->
