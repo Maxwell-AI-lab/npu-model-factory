@@ -5058,18 +5058,19 @@
 
         <!-- Edge paths -->
         <path data-edge-from="new-model" data-edge-to="analyze" data-edge-key="0" data-edge-id="e-analyze" data-composition-points="192,120;272.4,120" d="M 192 120 L 272.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="repo" data-edge-to="build-image" data-edge-key="1" data-edge-id="e-build" data-composition-points="760.4,372;788.4,372" d="M 760.4 372 L 788.4 372" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="2" data-edge-id="e-feedback-in" data-composition-points="1128,532;1128,564;688.4,564;688.4,406" d="M 1128 532 L 1128 564 L 688.4 564 L 688.4 406" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
-        <path data-edge-from="feature-input" data-edge-to="dev-feature" data-edge-label="fetch_sources" data-edge-key="3" data-edge-id="e-fstart" data-composition-points="192,246;272.4,246" d="M 192 246 L 272.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="verify-rl" data-edge-to="build-image" data-edge-label="补丁归档 · 验收完成" data-edge-key="4" data-edge-id="e-handoff" data-composition-points="860.4,146;860.4,231;948.4,231;948.4,372;932.4,372" d="M 860.4 146 L 860.4 231 L 948.4 231 L 948.4 372 L 932.4 372" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="analyze" data-edge-to="verify-infer" data-edge-key="5" data-edge-id="e-infer" data-composition-points="416.4,120;444.4,120" d="M 416.4 120 L 444.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="6" data-edge-id="e-pr" data-composition-points="688.4,272;688.4,294;776.4,294;776.4,372;760.4,372" d="M 688.4 272 L 688.4 294 L 776.4 294 L 776.4 372 L 760.4 372" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="dev-feature" data-edge-to="regen-patch" data-edge-label="冒烟通过" data-edge-key="7" data-edge-id="e-regen" data-composition-points="416.4,246;616.4,246" d="M 416.4 246 L 616.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="build-image" data-edge-to="release" data-edge-label="验收通过 · 晋级 Stable" data-edge-key="8" data-edge-id="e-release" data-composition-points="860.4,406;860.4,422;1128,422;1128,406" d="M 860.4 406 L 860.4 422 L 1128 422 L 1128 406" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="verify-train" data-edge-to="verify-rl" data-edge-key="9" data-edge-id="e-rl" data-composition-points="760.4,120;788.4,120" d="M 760.4 120 L 788.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="verify-infer" data-edge-to="verify-train" data-edge-key="10" data-edge-id="e-train" data-composition-points="588.4,120;616.4,120" d="M 588.4 120 L 616.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="11" data-edge-id="e-tstart" data-composition-points="932.4,498;1030.2,498;1030.2,548;1128,548;1128,532" d="M 932.4 498 L 1030.2 498 L 1030.2 548 L 1128 548 L 1128 532" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="release" data-edge-to="train-input" data-edge-label="docker pull" data-edge-key="12" data-edge-id="e-use" data-composition-points="1200,372;1220,372;1220,456;860.4,456;860.4,472" d="M 1200 372 L 1220 372 L 1220 456 L 860.4 456 L 860.4 472" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="verify-rl" data-edge-to="repo" data-edge-label="补丁归档" data-edge-key="1" data-edge-id="e-archive" data-composition-points="853.4,146;853.4,231;776.4,231;776.4,365;760.4,365" d="M 853.4 146 L 853.4 231 L 776.4 231 L 776.4 365 L 760.4 365" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="repo" data-edge-to="build-image" data-edge-key="2" data-edge-id="e-build" data-composition-points="688.4,406;688.4,422;860.4,422;860.4,406" d="M 688.4 406 L 688.4 422 L 860.4 422 L 860.4 406" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="3" data-edge-id="e-feedback-in" data-composition-points="1128,532;1128,564;688.4,564;688.4,406" d="M 1128 532 L 1128 564 L 688.4 564 L 688.4 406" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+        <path data-edge-from="feature-input" data-edge-to="dev-feature" data-edge-label="fetch_sources" data-edge-key="4" data-edge-id="e-fstart" data-composition-points="192,246;272.4,246" d="M 192 246 L 272.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="verify-rl" data-edge-to="build-image" data-edge-label="验收完成" data-edge-key="5" data-edge-id="e-handoff" data-composition-points="860.4,146;860.4,231;948.4,231;948.4,372;932.4,372" d="M 860.4 146 L 860.4 231 L 948.4 231 L 948.4 372 L 932.4 372" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="analyze" data-edge-to="verify-infer" data-edge-key="6" data-edge-id="e-infer" data-composition-points="416.4,120;444.4,120" d="M 416.4 120 L 444.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="7" data-edge-id="e-pr" data-composition-points="688.4,272;688.4,294;776.4,294;776.4,372;760.4,372" d="M 688.4 272 L 688.4 294 L 776.4 294 L 776.4 372 L 760.4 372" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="dev-feature" data-edge-to="regen-patch" data-edge-label="冒烟通过" data-edge-key="8" data-edge-id="e-regen" data-composition-points="416.4,246;616.4,246" d="M 416.4 246 L 616.4 246" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="build-image" data-edge-to="release" data-edge-label="验收通过 · 晋级 Stable" data-edge-key="9" data-edge-id="e-release" data-composition-points="860.4,406;860.4,422;1128,422;1128,406" d="M 860.4 406 L 860.4 422 L 1128 422 L 1128 406" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="verify-train" data-edge-to="verify-rl" data-edge-key="10" data-edge-id="e-rl" data-composition-points="760.4,120;788.4,120" d="M 760.4 120 L 788.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="verify-infer" data-edge-to="verify-train" data-edge-key="11" data-edge-id="e-train" data-composition-points="588.4,120;616.4,120" d="M 588.4 120 L 616.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="12" data-edge-id="e-tstart" data-composition-points="932.4,498;1030.2,498;1030.2,548;1128,548;1128,532" d="M 932.4 498 L 1030.2 498 L 1030.2 548 L 1128 548 L 1128 532" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="release" data-edge-to="train-input" data-edge-label="docker pull" data-edge-key="13" data-edge-id="e-use" data-composition-points="1200,372;1220,372;1220,456;860.4,456;860.4,472" d="M 1200 372 L 1220 372 L 1220 456 L 860.4 456 L 860.4 472" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
 
         <!-- Nodes -->
         <g id="node-new-model" data-node-id="new-model" data-node-label="新模型发布" tabindex="0" role="button" aria-label="聚焦新模型发布，config · 权重 · 架构, ① 模型适配工程师 › 洞察" aria-pressed="false" data-node-kind="external" data-node-sublabel="config · 权重 · 架构" data-node-tag="① 输入" data-node-context="① 模型适配工程师 › 洞察">
@@ -5239,39 +5240,43 @@
 
         <!-- Edge labels -->
 
+        <g data-detail="context" data-edge-from="verify-rl" data-edge-to="repo" data-edge-label="补丁归档" data-edge-key="1" data-edge-id="e-archive">
+          <rect x="790.6999999999999" y="211" width="48.4" height="14" rx="3" class="c-mask"/>
+          <text x="814.9" y="221" class="t-muted" font-size="8" text-anchor="middle">补丁归档</text>
+        </g>
 
-        <g data-detail="context" data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="2" data-edge-id="e-feedback-in">
+        <g data-detail="context" data-edge-from="run-train" data-edge-to="repo" data-edge-label="故障回流" data-edge-key="3" data-edge-id="e-feedback-in">
           <rect x="884" y="544" width="48.4" height="14" rx="3" class="c-mask"/>
           <text x="908.2" y="554" class="t-database" font-size="8" text-anchor="middle">故障回流</text>
         </g>
-        <g data-detail="context" data-edge-from="feature-input" data-edge-to="dev-feature" data-edge-label="fetch_sources" data-edge-key="3" data-edge-id="e-fstart">
+        <g data-detail="context" data-edge-from="feature-input" data-edge-to="dev-feature" data-edge-label="fetch_sources" data-edge-key="4" data-edge-id="e-fstart">
           <rect x="196" y="226" width="72.4" height="14" rx="3" class="c-mask"/>
           <text x="232.2" y="236" class="t-muted" font-size="8" text-anchor="middle">fetch_sources</text>
         </g>
-        <g data-detail="context" data-edge-from="verify-rl" data-edge-to="build-image" data-edge-label="补丁归档 · 验收完成" data-edge-key="4" data-edge-id="e-handoff">
-          <rect x="853.8" y="211" width="101.2" height="14" rx="3" class="c-mask"/>
-          <text x="904.4" y="221" class="t-muted" font-size="8" text-anchor="middle">补丁归档 · 验收完成</text>
+        <g data-detail="context" data-edge-from="verify-rl" data-edge-to="build-image" data-edge-label="验收完成" data-edge-key="5" data-edge-id="e-handoff">
+          <rect x="880.1999999999999" y="211" width="48.4" height="14" rx="3" class="c-mask"/>
+          <text x="904.4" y="221" class="t-muted" font-size="8" text-anchor="middle">验收完成</text>
         </g>
 
-        <g data-detail="context" data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="6" data-edge-id="e-pr">
+        <g data-detail="context" data-edge-from="regen-patch" data-edge-to="repo" data-edge-label="PR 合入" data-edge-key="7" data-edge-id="e-pr">
           <rect x="710.6" y="274" width="43.6" height="14" rx="3" class="c-mask"/>
           <text x="732.4" y="284" class="t-backend" font-size="8" text-anchor="middle">PR 合入</text>
         </g>
-        <g data-detail="context" data-edge-from="dev-feature" data-edge-to="regen-patch" data-edge-label="冒烟通过" data-edge-key="7" data-edge-id="e-regen">
+        <g data-detail="context" data-edge-from="dev-feature" data-edge-to="regen-patch" data-edge-label="冒烟通过" data-edge-key="8" data-edge-id="e-regen">
           <rect x="492.2" y="226" width="48.4" height="14" rx="3" class="c-mask"/>
           <text x="516.4" y="236" class="t-muted" font-size="8" text-anchor="middle">冒烟通过</text>
         </g>
-        <g data-detail="context" data-edge-from="build-image" data-edge-to="release" data-edge-label="验收通过 · 晋级 Stable" data-edge-key="8" data-edge-id="e-release">
+        <g data-detail="context" data-edge-from="build-image" data-edge-to="release" data-edge-label="验收通过 · 晋级 Stable" data-edge-key="9" data-edge-id="e-release">
           <rect x="936.4000000000001" y="402" width="115.6" height="14" rx="3" class="c-mask"/>
           <text x="994.2" y="412" class="t-backend" font-size="8" text-anchor="middle">验收通过 · 晋级 Stable</text>
         </g>
 
 
-        <g data-detail="context" data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="11" data-edge-id="e-tstart">
+        <g data-detail="context" data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="12" data-edge-id="e-tstart">
           <rect x="966.3" y="478" width="30" height="14" rx="3" class="c-mask"/>
           <text x="981.3" y="488" class="t-muted" font-size="8" text-anchor="middle">挂载</text>
         </g>
-        <g data-detail="context" data-edge-from="release" data-edge-to="train-input" data-edge-label="docker pull" data-edge-key="12" data-edge-id="e-use">
+        <g data-detail="context" data-edge-from="release" data-edge-to="train-input" data-edge-label="docker pull" data-edge-key="13" data-edge-id="e-use">
           <rect x="1008.8000000000001" y="436" width="62.8" height="14" rx="3" class="c-mask"/>
           <text x="1040.2" y="446" class="t-muted" font-size="8" text-anchor="middle">docker pull</text>
         </g>
