@@ -5071,6 +5071,7 @@
         <path data-edge-from="build-image" data-edge-to="run-train" data-edge-label="docker pull" data-edge-key="11" data-edge-id="e-run" data-composition-points="1128.8,372;1187.601,372;1187.601,498;1128.8,498" d="M 1128.8 372 L 1187.601 372 L 1187.601 498 L 1128.8 498" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="verify-infer" data-edge-to="verify-train" data-edge-key="12" data-edge-id="e-train" data-composition-points="576.4,120;604.4,120" d="M 576.4 120 L 604.4 120" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
         <path data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="13" data-edge-id="e-tstart" data-composition-points="870.8,532;870.8,552;962.8,552;962.8,498;978.8,498" d="M 870.8 532 L 870.8 552 L 962.8 552 L 962.8 498 L 978.8 498" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="registry" data-edge-to="verify-infer" data-edge-label="数据集+权重供给" data-edge-key="14" data-edge-id="e-verify-res" data-composition-points="604.4,372;20,372;20,162;506.4,162;506.4,146" d="M 604.4 372 L 20 372 L 20 162 L 506.4 162 L 506.4 146" class="a-dashed" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
 
         <!-- Nodes -->
         <g id="node-new-model" data-node-id="new-model" data-node-label="新模型发布" tabindex="0" role="button" aria-label="聚焦新模型发布，HF config / 权重 / 架构代码, ① 模型适配工程师 › 洞察" aria-pressed="false" data-node-kind="external" data-node-sublabel="HF config / 权重 / 架构代码" data-node-tag="① 输入" data-node-context="① 模型适配工程师 › 洞察">
@@ -5280,6 +5281,10 @@
         <g data-detail="context" data-edge-from="train-input" data-edge-to="run-train" data-edge-label="挂载" data-edge-key="13" data-edge-id="e-tstart">
           <rect x="901.8" y="532" width="30" height="14" rx="3" class="c-mask"/>
           <text x="916.8" y="542" class="t-muted" font-size="8" text-anchor="middle">挂载</text>
+        </g>
+        <g data-detail="context" data-edge-from="registry" data-edge-to="verify-infer" data-edge-label="数据集+权重供给" data-edge-key="14" data-edge-id="e-verify-res">
+          <rect x="271.2" y="352" width="82" height="14" rx="3" class="c-mask"/>
+          <text x="312.2" y="362" class="t-database" font-size="8" text-anchor="middle">数据集+权重供给</text>
         </g>
 
         <!-- Legend -->
