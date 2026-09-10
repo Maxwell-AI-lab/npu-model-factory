@@ -43,3 +43,8 @@
 ## License
 
 MIT
+
+## 配套图示
+
+- [全景图](index.html)——四角色与工作流
+- [组件依赖图](rl-stack-dependency.html)——RL 版本镜像的组件构成 / 依赖链 / 补丁作用面 / 升级影响面
