@@ -22,7 +22,7 @@
 | 体积 | 21.9GB 解压 / 7.9GB 压缩 21 层 | 21.4GB / 7.3GB |
 | L1 算子/卡上计算 | ✅（.131 实测） | ✅（.155 实测） |
 | L2 8 卡引擎+生成 | ✅ | ✅ |
-| L3 GRPO 训练闭环 | 9.1.0 同代码版 ✅（4 步全绿）；920 版进行中 | ✅ pearson 0.9986/0.0063 |
+| L3 GRPO 训练闭环 | 9.1.0 同代码版 ✅（4 步全绿）；920 版 ✅ pearson 0.9968/diff 0.00146（40 层全层型 2 步全绿） | ✅ pearson 0.9986/0.0063 |
 
 ```bash
 docker pull swr.ap-southeast-1.myhuaweicloud.com/aura_agentic/dsv41-rl-stack:verdaf3f7ee-cann9.2.0-910b-vllm0.30.0-fsdpturbo
@@ -131,7 +131,7 @@ docker run -d --name rl --network host --shm-size 64g \
 | L0 | 构建期四仓 import 冒烟 | ✅ |
 | L1 | NPU 识别 + 卡上计算 + DSA 六算子注册（npu_sparse_flash_mla / npu_scatter_nd_update_sk / npu_quant_lightning_indexer_v3 等） | ✅（910/920 双版本） |
 | L2 | 8 卡 TP8 vLLM 引擎 + 真实生成请求 | ✅（双版本；920 与 910 的 dummy 生成几乎逐 token 一致=跨版本数值一致彩蛋） |
-| L3 | GRPO 训练闭环（生成→奖励→优势→反向→权重同步） | ✅ 910 版 4 步全绿：**pearson 0.9986 / diff 0.0063，四步稳定**；920 版进行中 |
+| L3 | GRPO 训练闭环（生成→奖励→优势→反向→权重同步） | ✅ 910 版 4 步全绿：**pearson 0.9986 / diff 0.0063，四步稳定**；920 版 ✅ pearson 0.9968/diff 0.00146（40 层全层型 2 步全绿） |
 | 附 | grad_norm=0 属预期 | 随机/切片权重答不对题→奖励全 0→零优势；真训练需 SFT 起点权重（同 menjiantong top32-sft116 实践） |
 
 ## 7. 相对 menjiantong 原样的三处补丁（全部归档，bind-mount 应用、镜像 digest 不受影响）
